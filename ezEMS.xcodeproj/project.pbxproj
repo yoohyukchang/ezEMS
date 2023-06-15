@@ -11,6 +11,7 @@
 		498D38782A3AFFAA00B63701 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D38772A3AFFAA00B63701 /* ContentView.swift */; };
 		498D387A2A3AFFAB00B63701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498D38792A3AFFAB00B63701 /* Assets.xcassets */; };
 		498D387D2A3AFFAB00B63701 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498D387C2A3AFFAB00B63701 /* Preview Assets.xcassets */; };
+		498D38852A3B001900B63701 /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = 498D38842A3B001900B63701 /* SwiftyTesseract */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498D38852A3B001900B63701 /* SwiftyTesseract in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = ezEMS;
+			packageProductDependencies = (
+				498D38842A3B001900B63701 /* SwiftyTesseract */,
+			);
 			productName = ezEMS;
 			productReference = 498D38722A3AFFAA00B63701 /* ezEMS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 498D38692A3AFFAA00B63701;
+			packageReferences = (
+				498D38832A3B001900B63701 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */,
+			);
 			productRefGroup = 498D38732A3AFFAA00B63701 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		498D38832A3B001900B63701 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyTesseract/SwiftyTesseract.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		498D38842A3B001900B63701 /* SwiftyTesseract */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 498D38832A3B001900B63701 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */;
+			productName = SwiftyTesseract;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 498D386A2A3AFFAA00B63701 /* Project object */;
 }

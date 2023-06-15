@@ -2,7 +2,7 @@
 //  ezEMSApp.swift
 //  ezEMS
 //
-//  Created by 장유혁 on 6/15/23.
+//  Created by Yoohyuk Chang on 6/15/23.
 //
 
 import SwiftUI

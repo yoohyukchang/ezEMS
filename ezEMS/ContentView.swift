@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  ezEMS
 //
-//  Created by 장유혁 on 6/15/23.
+//  Created by Yoohyuk Chang on 6/15/23.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("This is for testing")
         }
         .padding()
     }
