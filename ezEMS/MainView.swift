@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  ezEMSApp
 //
 //  Created by Yoohyuk Chang on 6/15/23.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject var viewModel = ContentViewModel()
+struct MainView: View {
+    @StateObject var viewModel = MainViewModel()
 
     var body: some View {
         VStack {
@@ -20,9 +20,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  MainViewModel.swift
 //  ezEMS
 //
 //  Created by Yoohyuk Chang on 6/15/23.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftyTesseract
 import Combine
 
-class ContentViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     @Published var recognizedText: String = ""
 
     func recognizeText() {
