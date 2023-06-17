@@ -12,14 +12,10 @@ import Combine
 class MainViewModel: ObservableObject {
     @Published var recognizedText: String = ""
 
-    func recognizeText() {
+    func recognizeText(from image: UIImage) {
         let tesseract = Tesseract(languages: [.english])
-        guard let image = UIImage(named: "test_image2") else {
-            print("Image not found!")
-            return
-        }
 
-        print(image)
+        print(image) // can delete (just for checking if an image is properly selected.)
 
         let publisher: AnyPublisher<String, Tesseract.Error> = tesseract.performOCRPublisher(on: image)
 
@@ -36,10 +32,12 @@ class MainViewModel: ObservableObject {
                 },
                 receiveValue: { recognizedText in
                     self.recognizedText = recognizedText
+                    // *** additional code to handle the recognized text
                 }
             )
             .store(in: &cancellables)
     }
+
     
     private var cancellables: Set<AnyCancellable> = []
 }
