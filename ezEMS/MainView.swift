@@ -22,10 +22,17 @@ struct MainView: View {
                 Button(action: {
                     openCameraRoll = true
                 }, label:  {
-                    Image("camera_icon")
-                        .resizable()
-                        .frame(width: 120, height: 120)
-                        .clipShape(Circle())
+                    ZStack {
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 120, height: 120)
+
+                        Image("access_album")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    }
                 })
                 Image(systemName: "plus")
                     .frame(width: 30, height: 30)
