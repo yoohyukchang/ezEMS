@@ -14,11 +14,11 @@ struct MainView: View {
     @State var changeImage = false
     @State var openCameraRoll = false
     @State var imageSelected = UIImage()
+    @State var openCamera = false
 
     var body: some View {
         VStack {
-            
-            ZStack(alignment: .bottomTrailing) {
+            HStack() {
                 Button(action: {
                     openCameraRoll = true
                 }, label:  {
@@ -26,7 +26,7 @@ struct MainView: View {
                         Circle()
                             .fill(Color.white)
                             .frame(width: 120, height: 120)
-
+                        
                         Image("access_album")
                             .resizable()
                             .scaledToFit()
@@ -34,14 +34,31 @@ struct MainView: View {
                             .clipShape(Circle())
                     }
                 })
-                Image(systemName: "plus")
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.black)
-                    .background(Color.gray)
-                    .clipShape(Circle())
-                
+//                Image(systemName: "plus")
+//                    .frame(width: 30, height: 30)
+//                    .foregroundColor(.black)
+//                    .background(Color.gray)
+//                    .clipShape(Circle())
+                Button(action: {
+                    openCamera = true
+                }, label: {
+                    ZStack {
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 120, height: 120)
+                        
+                        Image("access_camera")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    }
+                })
             }.sheet(isPresented: $openCameraRoll) {
                 ImagePicker(selectedImage: $imageSelected, sourceType: .photoLibrary)
+            }
+            .sheet(isPresented: $openCamera) {
+                ImagePicker(selectedImage: $imageSelected, sourceType: .camera)
             }
             
             Text(viewModel.recognizedText)
