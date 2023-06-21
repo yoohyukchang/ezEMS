@@ -17,6 +17,7 @@ struct MainView: View {
     @State var openCamera = false
 
     var body: some View {
+        
         VStack {
             HStack() {
                 Button(action: {
