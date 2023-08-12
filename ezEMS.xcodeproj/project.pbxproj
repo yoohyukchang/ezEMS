@@ -14,6 +14,8 @@
 		498D387D2A3AFFAB00B63701 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498D387C2A3AFFAB00B63701 /* Preview Assets.xcassets */; };
 		498D38852A3B001900B63701 /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = 498D38842A3B001900B63701 /* SwiftyTesseract */; };
 		498D38872A3B028400B63701 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 498D38862A3B028400B63701 /* tessdata */; };
+		49BA058E2A872AA80025109D /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49BA058D2A872AA80025109D /* PythonKit */; };
+		49BA05902A872C4A0025109D /* FindDrugInteraction.py in Resources */ = {isa = PBXBuildFile; fileRef = 49BA058F2A872C4A0025109D /* FindDrugInteraction.py */; };
 		49E2A9732A3B45A900AE12FB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E2A9722A3B45A900AE12FB /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,7 @@
 		498D38792A3AFFAB00B63701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		498D387C2A3AFFAB00B63701 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		498D38862A3B028400B63701 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		49BA058F2A872C4A0025109D /* FindDrugInteraction.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = FindDrugInteraction.py; sourceTree = "<group>"; };
 		49E2A9722A3B45A900AE12FB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498D38852A3B001900B63701 /* SwiftyTesseract in Frameworks */,
+				49BA058E2A872AA80025109D /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,7 @@
 				498D38792A3AFFAB00B63701 /* Assets.xcassets */,
 				498D387B2A3AFFAB00B63701 /* Preview Content */,
 				49E2A9722A3B45A900AE12FB /* ImagePicker.swift */,
+				49BA058F2A872C4A0025109D /* FindDrugInteraction.py */,
 			);
 			path = ezEMS;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			name = ezEMS;
 			packageProductDependencies = (
 				498D38842A3B001900B63701 /* SwiftyTesseract */,
+				49BA058D2A872AA80025109D /* PythonKit */,
 			);
 			productName = ezEMS;
 			productReference = 498D38722A3AFFAA00B63701 /* ezEMS.app */;
@@ -127,6 +133,7 @@
 			mainGroup = 498D38692A3AFFAA00B63701;
 			packageReferences = (
 				498D38832A3B001900B63701 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */,
+				49BA058C2A872AA80025109D /* XCRemoteSwiftPackageReference "PythonKit" */,
 			);
 			productRefGroup = 498D38732A3AFFAA00B63701 /* Products */;
 			projectDirPath = "";
@@ -142,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BA05902A872C4A0025109D /* FindDrugInteraction.py in Resources */,
 				498D387D2A3AFFAB00B63701 /* Preview Assets.xcassets in Resources */,
 				498D387A2A3AFFAB00B63701 /* Assets.xcassets in Resources */,
 				498D38872A3B028400B63701 /* tessdata in Resources */,
@@ -371,6 +379,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		49BA058C2A872AA80025109D /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -378,6 +394,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 498D38832A3B001900B63701 /* XCRemoteSwiftPackageReference "SwiftyTesseract" */;
 			productName = SwiftyTesseract;
+		};
+		49BA058D2A872AA80025109D /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49BA058C2A872AA80025109D /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
